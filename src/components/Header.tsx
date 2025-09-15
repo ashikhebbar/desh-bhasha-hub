@@ -5,6 +5,7 @@ import { LanguageSelector } from './LanguageSelector';
 import { Button } from '@/components/ui/button';
 
 export const Header: React.FC = () => {
+  console.log('Header component is rendering');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t } = useLanguage();
 

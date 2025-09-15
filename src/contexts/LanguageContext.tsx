@@ -118,9 +118,11 @@ interface LanguageProviderProps {
 }
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
+  console.log('LanguageProvider is rendering');
   const [currentLanguage, setCurrentLanguage] = useState<Language>(languages[0]);
 
   useEffect(() => {
+    console.log('LanguageProvider useEffect running');
     const savedLanguage = localStorage.getItem('preferred-language');
     if (savedLanguage) {
       const language = languages.find(lang => lang.code === savedLanguage);
