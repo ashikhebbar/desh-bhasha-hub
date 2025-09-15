@@ -29,12 +29,12 @@ export const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-foreground hover:text-primary font-medium transition-colors duration-200"
+                className="text-foreground hover:text-primary font-medium transition-colors duration-200 text-sm"
               >
                 {item.name}
               </a>
@@ -42,21 +42,34 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-3">
             <LanguageSelector />
-            <Button variant="ghost" size="sm">
-              <LogIn className="h-4 w-4 mr-2" />
-              {t('auth.login')}
+            <Button variant="ghost" size="sm" onClick={() => window.location.href = '/login'}>
+              <LogIn className="h-4 w-4 mr-1" />
+              <span className="hidden xl:inline">{t('auth.login')}</span>
             </Button>
-            <Button className="btn-hero" size="sm">
-              <UserPlus className="h-4 w-4 mr-2" />
-              {t('auth.signup')}
+            <Button className="btn-hero" size="sm" onClick={() => window.location.href = '/signup'}>
+              <UserPlus className="h-4 w-4 mr-1" />
+              <span className="hidden xl:inline">{t('auth.signup')}</span>
+            </Button>
+          </div>
+
+          {/* Tablet Actions */}
+          <div className="hidden md:flex lg:hidden items-center space-x-2">
+            <LanguageSelector />
+            <Button variant="ghost" size="sm" onClick={() => window.location.href = '/login'}>
+              <LogIn className="h-4 w-4" />
+            </Button>
+            <Button className="btn-hero" size="sm" onClick={() => window.location.href = '/signup'}>
+              <UserPlus className="h-4 w-4" />
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center gap-2">
-            <LanguageSelector />
+          <div className="flex md:hidden items-center gap-2">
+            <div className="sm:block hidden">
+              <LanguageSelector />
+            </div>
             <Button
               variant="ghost"
               size="sm"

@@ -32,31 +32,31 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="max-w-3xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+        <div className="max-w-4xl mx-auto text-center lg:text-left">
           <div className="animate-fade-in">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="bg-accent/20 backdrop-blur-sm px-4 py-2 rounded-full border border-accent/30">
-                <span className="text-accent font-semibold text-sm">AI-Powered Agriculture</span>
+            <div className="flex justify-center lg:justify-start items-center gap-2 mb-4 sm:mb-6">
+              <div className="bg-accent/20 backdrop-blur-sm px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-accent/30">
+                <span className="text-accent font-semibold text-xs sm:text-sm">AI-Powered Agriculture</span>
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               {t('hero.title')}
             </h1>
             
-            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-6 sm:mb-8 leading-relaxed max-w-3xl mx-auto lg:mx-0">
               {t('hero.subtitle')}
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-              <Button className="btn-hero text-lg px-8 py-4 h-auto">
-                <Camera className="mr-2 h-5 w-5" />
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-slide-up justify-center lg:justify-start" style={{ animationDelay: '0.3s' }}>
+              <Button className="btn-hero text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto" onClick={() => window.location.href = '/upload'}>
+                <Camera className="mr-2 h-4 sm:h-5 w-4 sm:w-5" />
                 {t('hero.cta.primary')}
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 sm:h-5 w-4 sm:w-5" />
               </Button>
               
-              <Button className="btn-outline-hero text-lg px-8 py-4 h-auto">
+              <Button className="btn-outline-hero text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 h-auto w-full sm:w-auto">
                 {t('hero.cta.secondary')}
               </Button>
             </div>
@@ -65,19 +65,19 @@ export const Hero: React.FC = () => {
       </div>
 
       {/* Stats Cards */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="flex gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 text-center">
-            <div className="text-2xl font-bold text-white">50+</div>
-            <div className="text-white/70 text-sm">Breed Types</div>
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 animate-slide-up" style={{ animationDelay: '0.6s' }}>
+          <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20 text-center">
+            <div className="text-xl sm:text-2xl font-bold text-white">50+</div>
+            <div className="text-white/70 text-xs sm:text-sm">Breed Types</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 text-center">
-            <div className="text-2xl font-bold text-white">95%</div>
-            <div className="text-white/70 text-sm">Accuracy</div>
+          <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20 text-center">
+            <div className="text-xl sm:text-2xl font-bold text-white">95%</div>
+            <div className="text-white/70 text-xs sm:text-sm">Accuracy</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm p-4 rounded-lg border border-white/20 text-center">
-            <div className="text-2xl font-bold text-white">12+</div>
-            <div className="text-white/70 text-sm">Languages</div>
+          <div className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20 text-center">
+            <div className="text-xl sm:text-2xl font-bold text-white">12+</div>
+            <div className="text-white/70 text-xs sm:text-sm">Languages</div>
           </div>
         </div>
       </div>
